@@ -1,19 +1,32 @@
 <?php
-	$login = filter_var(trim($_POST['login']), 
-	FILTER_SANITIZE_STRING);
-	$pass = filter_var(trim($_POST['pass']), 
-	FILTER_SANITIZE_STRING);
-
-	$salt = '12345';
-	$pass = md5($pass.$salt);
-
 	$mysql = new mysqli(
 		'localhost', 
 		'root', 
 		'root', 
 		'test_site'
 	);
+	$login = filter_var(trim($_POST['login']), 
+	FILTER_SANITIZE_STRING);
+	$pass = filter_var(trim($_POST['pass']), 
+	FILTER_SANITIZE_STRING);
 
+	$q = "SELECT * FROM `users` WHERE `login` = '$login'";
+
+	if (mysqli_query($mysql, $q)) {
+		$result = mysqli_query($mysql, $q);
+		$user = $result->fetch_assoc();
+		if (count($user) == 0) {
+			echo 'Такого логина в системе нет! <a href="sign-in.php">Повторить</a>';
+		}
+		else {
+			$salt = $user['salt'];
+			$pass = md5($pass.$salt);
+		}
+	}
+	
+	
+
+	
 	$q = "SELECT * FROM `users` WHERE `login` = '$login' AND `hash` = '$pass'";
 
 	if (mysqli_query($mysql, $q)) {

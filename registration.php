@@ -14,20 +14,21 @@
 		exit();
 	}
 
-	// function generateRandomString($length = 10) {
+	function generateRandomString($length = 10) {
 
- //    	$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    	$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
- //    	$charactersLength = strlen($characters);
+    	$charactersLength = strlen($characters);
 
- //    	$randomString = '';
+    	$randomString = '';
 
- //    	for ($i = 0; $i < $length; $i++) {
- //        	$randomString .= $characters[rand(0, $charactersLength - 1)];
- //    	}
- //    	return $randomString;
-	// }
-	$salt = '12345';
+    	for ($i = 0; $i < $length; $i++) {
+        	$randomString .= $characters[rand(0, $charactersLength - 1)];
+    	}
+    	return $randomString;
+	}
+
+	$salt = generateRandomString();
 
 	$pass = md5($pass.$salt);
 
@@ -43,7 +44,7 @@
 	if (mysqli_query($mysql, $q)) {
     	echo "New record created successfully";
 	} else {
-    	echo "Error: " . $q . "<br>" . mysqli_error($mysql);
+    	echo "Error: ".$q."<br>".mysqli_error($mysql);
 	}
 	mysqli_close($mysql);
 
