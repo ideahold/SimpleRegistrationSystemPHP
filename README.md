@@ -13,6 +13,10 @@ Simple registration system in PHP.
 
 Реализовал интерфес с формой регистрации и входа, для хранения данных используется БД MySQL.
 
+Сценарии
+
+https://www.figma.com/file/PWQlw6QhS6PibV8sktH75C/registration?node-id=0%3A1
+
 В проекте содержится 7 файлов: auth.php, registration.php, index.php, exit.php, sign-in.php, success.php, style.css (просто стили).
 
 - auth.php используется для проверки наличия пользователя в БД.
