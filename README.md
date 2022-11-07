@@ -21,6 +21,10 @@ https://www.figma.com/file/PWQlw6QhS6PibV8sktH75C/registration?node-id=0%3A1
 
 ![Рис. 1 - Хореография](https://github.com/ideahold/SimpleRegistrationSystemPHP/blob/main/%D0%A5%D0%BE%D1%80%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F.png)
 
+База данных
+
+![Рис. 2 - База Данных](https://github.com/ideahold/SimpleRegistrationSystemPHP/blob/main/%D0%B1%D0%B4.png)
+
 В проекте содержится 7 файлов: auth.php, registration.php, index.php, exit.php, sign-in.php, success.php, style.css (просто стили).
 
 - auth.php используется для проверки наличия пользователя в БД.
@@ -44,7 +48,8 @@ https://www.figma.com/file/PWQlw6QhS6PibV8sktH75C/registration?node-id=0%3A1
 По нажатию на кнопку выйти (сработает скрипт exit.php) куки пользователя будут удалены и пользователь будет перенаправлен на страницу с регистрацией.
 
 
-
+## Вывод
+Спроектировали и разработали систему авторизации пользователей на протоколе HTTP
 
 
 
