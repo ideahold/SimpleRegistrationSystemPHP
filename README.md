@@ -47,6 +47,18 @@ https://www.figma.com/file/PWQlw6QhS6PibV8sktH75C/registration?node-id=0%3A1
 
 По нажатию на кнопку выйти (сработает скрипт exit.php) куки пользователя будут удалены и пользователь будет перенаправлен на страницу с регистрацией.
 
+Регистрация
+
+![Рис. 3 - Регистрация](https://github.com/ideahold/SimpleRegistrationSystemPHP/blob/main/registration.png)
+
+Вход
+
+![Рис. 4 - Вход](https://github.com/ideahold/SimpleRegistrationSystemPHP/blob/main/auth.png)
+
+Выход
+
+![Рис. 5 - Выход](https://github.com/ideahold/SimpleRegistrationSystemPHP/blob/main/exit.png)
+
 
 ## Вывод
 Спроектировали и разработали систему авторизации пользователей на протоколе HTTP
